@@ -1,3 +1,3 @@
-.config/nvim/autoload linguist-vendored
-.config/nvim/bundle linguist-vendore
-.config/nvim/colors linguist-vendored
+.config/nvim/autoload/* linguist-vendored
+.config/nvim/bundle/* linguist-vendore
+.config/nvim/colors/* linguist-vendored
