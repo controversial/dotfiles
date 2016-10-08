@@ -1,6 +1,28 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/luke/.oh-my-zsh
 
+# POWERLEVEL9K---------------------------------------
+
+# Basic powerlevel9k setup
+POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_username time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
+
+# CUSTOM USERNAME COMMAND
+POWERLEVEL9K_CUSTOM_USERNAME="echo $USER"
+
+# COLORS
+POWERLEVEL9K_CUSTOM_USERNAME_BACKGROUND='blue'
+POWERLEVEL9K_CUSTOM_USERNAME_FOREGROUND='black'
+POWERLEVEL9K_TIME_BACKGROUND='yellow'
+POWERLEVEL9K_TIME_FOREGROUND='black'
+
+# TIME FORMAT
+POWERLEVEL9K_TIME_FORMAT='%D{%I:%M %p}'
+
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
