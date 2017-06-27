@@ -1,29 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/luke/.oh-my-zsh
 
-# POWERLEVEL9K---------------------------------------
+ZSH_THEME="pure"
 
-# Basic powerlevel9k setup
-POWERLEVEL9K_MODE='awesome-patched'
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_username time)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
-
-# CUSTOM USERNAME COMMAND
-POWERLEVEL9K_CUSTOM_USERNAME="echo $USER"
-
-# COLORS
-POWERLEVEL9K_CUSTOM_USERNAME_BACKGROUND='blue'
-POWERLEVEL9K_CUSTOM_USERNAME_FOREGROUND='black'
-POWERLEVEL9K_TIME_BACKGROUND='yellow'
-POWERLEVEL9K_TIME_FOREGROUND='black'
-
-# TIME FORMAT
-POWERLEVEL9K_TIME_FORMAT='%D{%I:%M %p}'
-
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions npm)
 
 # User configuration
 
@@ -73,7 +53,16 @@ alias pip2='command pip'
 alias vim=nvim
 alias oldvim='command vim'
 alias edit=$EDITOR
+alias gpg=gpg2
+alias bc='bc -l'
+alias calc='bc -l'
 
-# Enable fuck command
-# $(thefuck --alias)
+# MISC
+export PATH="$HOME/.yarn/bin:$PATH"
 
+NPM_PACKAGES="${HOME}/.npm-packages"
+PATH="$NPM_PACKAGES/bin:$PATH"
+unset MANPATH
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+export NODE_PATH=/usr/local/lib/node_modules
